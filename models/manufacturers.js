@@ -1,4 +1,4 @@
-const Manufacturers = (connection, Sequelize) => {
+export default (connection, Sequelize) => {
   return connection.define('manufacturers', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: Sequelize.STRING, allowNull: false },
@@ -6,4 +6,3 @@ const Manufacturers = (connection, Sequelize) => {
   }, { paranoid: true })
 }
 
-module.exports = Manufacturers
